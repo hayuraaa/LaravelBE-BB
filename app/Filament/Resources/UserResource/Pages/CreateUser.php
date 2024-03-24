@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Filament\Resources\PembelajaranResource\Pages;
+namespace App\Filament\Resources\UserResource\Pages;
 
-use App\Filament\Resources\PembelajaranResource;
+use App\Filament\Resources\UserResource;
 use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
 
-class CreatePembelajaran extends CreateRecord
+class CreateUser extends CreateRecord
 {
-    protected static string $resource = PembelajaranResource::class;
+    protected static string $resource = UserResource::class;
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');
     }
     protected function getCreatedNotificationTitle(): ?string
     {
-        return 'Pembelajaran created';
+        return 'User registered';
     }
 }

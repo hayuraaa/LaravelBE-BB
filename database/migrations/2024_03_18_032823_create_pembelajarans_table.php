@@ -19,8 +19,8 @@ return new class extends Migration
             $table->text('sampul');
             $table->longText('penjelasan-modul');
             $table->longText('kontent-modul');
-            $table->string('viedo');
-            $table->string('pdf');
+            $table->text('viedo');
+            $table->text('pdf');
             $table->timestamps();
         });
     }

@@ -17,7 +17,8 @@ class TranslateResource extends Resource
 {
     protected static ?string $model = Translate::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-language';
+    protected static ?string $navigationGroup = 'Future';
 
     public static function form(Form $form): Form
     {
@@ -46,6 +47,7 @@ class TranslateResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

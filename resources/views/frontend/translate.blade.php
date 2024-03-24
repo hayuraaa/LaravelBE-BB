@@ -2,9 +2,12 @@
 
 @section('content')
 
-    
+<div class="iframe-container">
+    <iframe src="https://www.bilikbecakap.com" frameborder="0" scrolling="auto"></iframe>
+</div>
+ 
 
-<section id="penerjemah">
+{{-- <section id="penerjemah">
     <div class="penerjemah main-container">
         <div class="penerjemah-right">
             <img src="{{ asset('FE-BB/images/penerjemah.png')}}" alt="penerjemah">
@@ -59,7 +62,7 @@
         const params = 'senyubukText=' + encodeURIComponent(senyubukText) + "&isTranslationToIndo=" +encodeURIComponent(isTranslationToIndo);
         xhr.send(params);
     });
-</script>
+</script> --}}
 
 @endsection
 

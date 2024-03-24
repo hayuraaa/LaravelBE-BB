@@ -18,7 +18,8 @@ class PembelajaranResource extends Resource
 {
     protected static ?string $model = Pembelajaran::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
+    protected static ?string $navigationGroup = 'Future';
 
     public static function form(Form $form): Form
     {
@@ -43,11 +44,11 @@ class PembelajaranResource extends Resource
                 Forms\Components\RichEditor::make('kontent-modul')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\FileUpload::make('pdf')
+                Forms\Components\RichEditor::make('pdf')
                     ->required(),
                 Forms\Components\TextInput::make('viedo')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(555),
                 
             ]);
     }
@@ -73,11 +74,7 @@ class PembelajaranResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                Tables\Actions\DeleteAction::make(),
             ]);
     }
 

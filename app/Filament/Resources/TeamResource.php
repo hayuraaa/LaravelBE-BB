@@ -17,7 +17,8 @@ class TeamResource extends Resource
 {
     protected static ?string $model = Team::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
+    protected static ?string $navigationGroup = 'Galeri and Team';
 
     public static function form(Form $form): Form
     {
@@ -33,10 +34,8 @@ class TeamResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('linkedin')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('instagram')
-                    ->required()
                     ->maxLength(255),
             ]);
     }
@@ -64,6 +63,7 @@ class TeamResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

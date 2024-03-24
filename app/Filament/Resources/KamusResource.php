@@ -17,7 +17,8 @@ class KamusResource extends Resource
 {
     protected static ?string $model = Kamus::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
+    protected static ?string $navigationGroup = 'Future';
 
     public static function form(Form $form): Form
     {
@@ -42,7 +43,6 @@ class KamusResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('bahasa indonesia')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('audio'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -57,12 +57,8 @@ class KamusResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
             ]);
+            
             
             // ->headerActions([
             //     Tables\Actions\CreateAction::make(),
