@@ -1,8 +1,11 @@
 @extends('frontend.layout')
 
+@section('title', 'Pembelajaran - Bilik Becakap')
+
 @section('content')
 
     @foreach ($pembelajarans as $pembelajaran)
+    <div class="main-container">
     <section id="pembelajaran">
         <div class="pembelajaran tmain-container">
             <div class="pembelajaran-grid">
@@ -19,6 +22,7 @@
             </div>
         </div>
     </section>
+    </div>
     @endforeach
     
 @endsection

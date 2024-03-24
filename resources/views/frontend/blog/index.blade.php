@@ -1,5 +1,7 @@
 @extends('frontend.layout')
 
+@section('title', 'Blog - Bilik Becakap')
+
 @section('content')
     
     <section id="blogs">

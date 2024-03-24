@@ -105,7 +105,7 @@ ul {
 
 
 .main-container {
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
 }
 
@@ -663,17 +663,21 @@ margin: 0 10px;
 }
 
 .featured-image img {
-  max-width: 100%;  
+  width: 800px;  
   align-self: center;
   height: auto;
 }
 
 .post-content {
   margin-top: 20px;
-  text-align: justify;
   max-width: 1200px;
   padding: 0 20px;
   padding-bottom: 50px;
+}
+
+.post-content p {
+  margin-top: 20px;
+  text-align: justify;
 }
 
 
@@ -1162,6 +1166,14 @@ padding: 1rem;
   
 }
 
+.pdf-embed {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+
+
 .copyright{
   background-color: var(--primaryTextColor);
   padding-bottom: 10px;
@@ -1196,3 +1208,152 @@ padding: 1rem;
     }
 }
 
+
+.heros {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0; /* Atur padding sesuai kebutuhan */
+}
+
+.page-inners {
+    display: flex;
+    justify-content: center; /* Membuat konten di tengah secara horizontal */
+    align-items: center; /* Membuat konten di tengah secara vertikal */
+    min-height: 60vh; /* Set tinggi minimum agar konten selalu di tengah */
+    text-align: center; /* Membuat teks di tengah */
+    z-index: 1;
+    
+}
+
+.overlays {
+    position: relative;
+}
+
+.overlays::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ubah opacity overlay sesuai kebutuhan */
+    z-index: -1;
+}
+
+.containers {
+    position: relative;
+    z-index: 2;
+}
+
+.headings {
+    color: #ffffff; /* Warna teks */
+    font-size: 36px; /* Ukuran font */
+    font-weight: bold; /* Ketebalan font */
+    margin-bottom: 20px; /* Jarak bawah teks */
+}
+
+
+.breadcrumbs {
+    background-color: transparent; /* Hapus background breadcrumb */
+    padding: 0; /* Hapus padding breadcrumb */
+    margin: 0; /* Hapus margin breadcrumb */
+}
+
+.breadcrumbs-item {
+    font-size: 16px; /* Ukuran font item breadcrumb */
+}
+
+.breadcrumbs-item a {
+    color: #ffffff; /* Warna teks item breadcrumb */
+    text-decoration: none; /* Hapus dekorasi teks item breadcrumb */
+}
+
+.breadcrumbs-item.active {
+    color: #ffffff; /* Warna teks item breadcrumb aktif */
+}
+
+
+.comment-form {
+    margin-top: 80px;
+    max-width: 700px;
+}
+
+.comment-form h3 {
+    margin-bottom: 20px;
+}
+
+.comment-form .form-group {
+    margin-bottom: 20px;
+}
+
+.comment-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 70px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form input[type="text"]:focus,
+.comment-form input[type="email"]:focus,
+.comment-form textarea:focus {
+    border-color: var(--primaryIconColorHover);
+}
+
+.comment-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primaryIconColor);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button[type="submit"]:hover {
+    background-color: var(--primaryTextColor);
+}
+
+
+.laravel-embed__responsive-wrapper {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.laravel-embed__fallback {
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laravel-embed__fallback,
+.laravel-embed__responsive-wrapper iframe,
+.laravel-embed__responsive-wrapper object,
+.laravel-embed__responsive-wrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -143,6 +143,7 @@
     <!-- End Portfolios -->
 
     <!-- Galeri -->
+    <div class="main-container">
     <section id="galeries">
       <h3 class="pre-title">Our Gallery</h3>
       <h1 class="section-title">Galeri Desa Senyubuk</h1>
@@ -150,8 +151,7 @@
         @foreach ($galeris as $galeri)
           <img src="{{ Storage::url($galeri->image)}}" alt="{{ $galeri->title }}">  
         @endforeach
-        
       </div>
-
     </section>
+    </div>
 @endsection

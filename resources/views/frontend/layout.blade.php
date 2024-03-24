@@ -4,7 +4,9 @@
     <link rel="stylesheet" href="{{ asset('FE-BB/styles/style.css')}}" />
     <link rel="stylesheet" href="{{ asset('FE-BB/styles/responsive.css')}}" />
      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Bilik Becakap</title>
+    <title>
+      @yield('title', 'Bilik Becakap')
+    </title>
     <link rel="icon" href={{ asset('FE-BB/images/logo.svg')}} type="image/x-icon">
   </head>
   <body>

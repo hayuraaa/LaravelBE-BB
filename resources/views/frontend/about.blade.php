@@ -1,5 +1,7 @@
 @extends('frontend.layout')
 
+@section('title', 'About - Bilik Becakap')
+
 @section('content')
         <section id="about">
         <div class="skills main-container">

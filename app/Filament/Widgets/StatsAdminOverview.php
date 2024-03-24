@@ -15,15 +15,15 @@ class StatsAdminOverview extends BaseWidget
         return [
             Stat::make('Kamus', Kamus::query()->count())
                 ->description('Kata Kamus dari database')
-                ->descriptionIcon('heroicon-m-arrow-trending-up')
+                ->descriptionIcon('heroicon-m-chat-bubble-left-right')
                 ->color('success'),
             Stat::make('Translate', Translate::query()->count())
                 ->description('Data Terkumpul')
-                ->descriptionIcon('heroicon-m-arrow-trending-up')
+                ->descriptionIcon('heroicon-m-language')
                 ->color('info'),
             Stat::make('Artikel dan Blog', Blog::query()->count())
-                ->description('3% increase')
-                ->descriptionIcon('heroicon-m-arrow-trending-down')
+                ->description('Postingan')
+                ->descriptionIcon('heroicon-m-newspaper')
                 ->color('warning'),
         ];
     }

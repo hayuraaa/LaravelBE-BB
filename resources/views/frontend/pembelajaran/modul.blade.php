@@ -1,7 +1,7 @@
 @extends('frontend.layout')
 
 @section('content')
-    
+    <div class="main-container">
         <section id="pembelajaran">
         <div class="pembelajaran tmain-container">
             <div class="judul-modul">
@@ -24,9 +24,14 @@
 
                     });
                 </script> -->
-                {!! $pembelajaran->viedo !!}
-
-                {!! $pembelajaran->pdf !!}
+                <div class="yt-embed">
+                    <x-embed url="{!! $pembelajaran->viedo !!}" aspect-ratio="16:9" />
+                </div>
+                
+                <div class="pdf-embed">
+                    {!! $pembelajaran->pdf !!}
+                </div>
+                
 
                 {{-- <style>
                     .pdfobject-container { height: 500px; border: 1px solid #ccc; }
@@ -52,5 +57,6 @@
         </div>
 
     </section>
+    </div>
 
 @endsection

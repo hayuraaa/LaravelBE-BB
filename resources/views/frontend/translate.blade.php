@@ -1,5 +1,7 @@
 @extends('frontend.layout')
 
+@section('title', 'Translate - Bilik Becakap')
+
 @section('content')
 
 <div class="iframe-container">
