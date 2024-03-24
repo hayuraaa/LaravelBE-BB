@@ -44,8 +44,9 @@ class PembelajaranResource extends Resource
                 Forms\Components\RichEditor::make('kontent-modul')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\RichEditor::make('pdf')
-                    ->required(),
+                Forms\Components\TextInput::make('pdf')
+                    ->required()
+                    ->label('embed from canva'),
                 Forms\Components\TextInput::make('viedo')
                     ->required()
                     ->maxLength(555),
@@ -57,6 +58,8 @@ class PembelajaranResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->label('Modul Ke'),
                 Tables\Columns\TextColumn::make('judul-modul')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('sampul'),
@@ -73,6 +76,7 @@ class PembelajaranResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ]);

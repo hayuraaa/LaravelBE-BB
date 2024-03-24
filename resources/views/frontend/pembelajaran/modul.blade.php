@@ -25,8 +25,21 @@
                     });
                 </script> -->
                 {!! $pembelajaran->viedo !!}
+
                 {!! $pembelajaran->pdf !!}
+
+                {{-- <style>
+                    .pdfobject-container { height: 500px; border: 1px solid #ccc; }
+                </style>
+                <div id="my-pdf"></div>
+                <script src="https://unpkg.com/pdfobject"></script>
+                <script>PDFObject.embed("{{ Storage::url($pembelajaran->pdf) }}", "#my-pdf");</script> --}}
                 
+                
+
+                {{-- <iframe src="{{ Storage::url($pembelajaran->pdf) }}" width="500" height="600" frameborder="0" allowfullscreen></iframe> --}}
+
+
                 {{-- <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
                     padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
                     border-radius: 8px; will-change: transform;">

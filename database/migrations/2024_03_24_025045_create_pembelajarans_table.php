@@ -15,12 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('judul-modul');
             $table->string('slug');
-            $table->string('modul');
             $table->text('sampul');
             $table->longText('penjelasan-modul');
             $table->longText('kontent-modul');
-            $table->text('viedo');
-            $table->text('pdf');
+            $table->string('viedo');
+            $table->string('pdf');
             $table->timestamps();
         });
     }
@@ -31,6 +30,5 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('pembelajarans');
-
     }
 };

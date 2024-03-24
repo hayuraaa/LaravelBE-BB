@@ -134,6 +134,11 @@ ul {
   font-size: 2rem;
 }
 
+.section-title-d {
+  margin: 1rem 0 0.9rem;
+  font-size: 2rem;
+}
+
 .pre-title {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
@@ -688,6 +693,7 @@ margin: 0 10px;
   max-width: 100%;
   height: auto;
   margin: 0 10px;
+  border-radius: 10px;
 }
 
 
@@ -900,8 +906,9 @@ footer p {
 }
 .center h1{
 	color: var(--primaryIconColor);
-	font-size: 4rem;
+	font-size: 3.2rem;
 	text-align: center;
+  margin-bottom: 20px;
 }
 .box{
 	padding: 16px;

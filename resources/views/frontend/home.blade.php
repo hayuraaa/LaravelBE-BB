@@ -70,7 +70,7 @@
     <!-- Desa Senyubuk -->
     <section id="skills">
       <div class="skills main-container">
-        <h1 class="section-title">Desa Senyubuk</h1>
+        <h1 class="section-title-d">Desa Senyubuk</h1>
 
         <div class="skills-grid">
           <div class="skills-left">
