@@ -42,8 +42,9 @@
 
         <div class="comment-form">
                 <h3>Form Komentar</h3>
-                <form action="#" method="POST">
+                <form action="{{ route('blog.store') }}" method="POST">
                     @csrf
+                    <input type="hidden" name="blog_slug" value="{{ $blog->slug }}">
                     <input type="hidden" name="blog_id" value="{{ $blog->id }}">
                     <div class="form-group">
                         <label for="name">Nama:</label>
@@ -55,7 +56,7 @@
                     </div>
                     <div class="form-group">
                         <label for="comment">Komentar:</label>
-                        <textarea id="comment" name="comment" class="form-control" required></textarea>
+                        <textarea id="comment" name="message" class="form-control" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Kirim Komentar</button>
                 </form>

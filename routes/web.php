@@ -23,3 +23,5 @@ Route::get('pembelajaran', [\App\Http\Controllers\PembelajaranController::class,
 Route::get('pembelajaran/{pembelajaran:slug}', [\App\Http\Controllers\PembelajaranController::class, 'modul'])->name('pembelajaran.modul');
 Route::get('blog', [\App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::get('blog/{blog:slug}', [\App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
+Route::post('blog/store', [\App\Http\Controllers\BlogController::class, 'store'])->name('blog.store');
+

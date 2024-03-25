@@ -31,7 +31,6 @@ class KamusResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('audio')
-                    ->required(),
             ]);
     }
 

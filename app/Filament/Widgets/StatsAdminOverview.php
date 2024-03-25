@@ -4,6 +4,7 @@ namespace App\Filament\Widgets;
 
 use App\Models\Blog;
 use App\Models\Kamus;
+use App\Models\Pembelajaran;
 use App\Models\Translate;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
@@ -21,10 +22,16 @@ class StatsAdminOverview extends BaseWidget
                 ->description('Data Terkumpul')
                 ->descriptionIcon('heroicon-m-language')
                 ->color('info'),
+            Stat::make('Pembelajaran', Pembelajaran::query()->count())
+                ->description('Modul')
+                ->descriptionIcon('heroicon-m-academic-cap')
+                ->color('gray'),
             Stat::make('Artikel dan Blog', Blog::query()->count())
                 ->description('Postingan')
                 ->descriptionIcon('heroicon-m-newspaper')
                 ->color('warning'),
+            
+            
         ];
     }
 }

@@ -10,8 +10,8 @@
                 <img src="{{ asset('FE-BB/images/sub/seputar-senyubuk.png')}}" alt="sub1">
             </div>
             <div class="grid-3">    
-                <!-- Blog 1 -->
-                @foreach ($blogs as $blog)
+                <!-- Blog  -->
+                @foreach ($blogs->sortByDesc('created_at') as $blog)
                 <div class="portfolio">
                     <div class="blog-cover">
                         <a href="{{ route('blog.show', $blog->slug) }}"><img src={{ Storage::url($blog->thumbnail) }} alt="{{ ($blog->title) }}"> </a>
