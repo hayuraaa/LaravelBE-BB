@@ -149,12 +149,12 @@
           <div class="footer-col">
             <h4>Feature</h4>
             <ul>
-              <li><a href="./kamus.html">Kamus</a></li>
-              <li><a href="./penerjemah.html">Penerjemah</a></li>
-              <li><a href="./pembelajaran.html">Pembelajaran</a></li>
+              <li><a href="./kamus">Kamus</a></li>
+              <li><a href="./penerjemah">Penerjemah</a></li>
+              <li><a href="./pembelajaran">Pembelajaran</a></li>
               <li><a href="./blog">Blog</a></li>
-              <li><a href="./about.html">About Us</a></li>
-              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./about">About Us</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -175,8 +175,8 @@
             <div class="social-links">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+              <a href="https://www.instagram.com/senyubuk_kbkm/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/bilikbecakap/"><i class="fab fa-linkedin-in"></i></a> 
             </div>
             <div class="social-links">
               <img src="{{ asset('FE-BB/images/logo-footer/kemendikbud.png')}}" alt="lofo-footer">
